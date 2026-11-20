@@ -61,7 +61,7 @@ export default function PrivacyPolicyPage() {
                         <h2>1. Scope</h2>
                         <p>
                             This Policy applies to the main website
-                            (https://veenailstudio.ca), the booking website
+                            (https://www.veenailstudio.ca), the booking website
                             (https://booking.veenailstudio.ca), client accounts,
                             online booking flows, booking-related emails, and
                             related communications. It does not control
@@ -331,7 +331,7 @@ export default function PrivacyPolicyPage() {
                         <p>
                             For privacy questions, account requests, or concerns,
                             contact Vee&apos;s Nail Studio through the contact
-                            method listed on https://veenailstudio.ca or by
+                            method listed on https://www.veenailstudio.ca or by
                             email at admin@motchi.ca. This email address may be
                             used for automated booking messages and may not be
                             monitored continuously, so urgent booking changes

@@ -1,8 +1,8 @@
 /* Site identity. Shared Motchi standard (AGENTS.md, "Website standard"). */
 export const site = {
     name: "Vee's Nail Studio",
-    /** Production origin. */
-    url: "https://veenailstudio.ca",
+    /** Production origin. veenailstudio.ca redirects here. */
+    url: "https://www.veenailstudio.ca",
     /** The separate booking app. */
     bookingUrl: "https://booking.veenailstudio.ca",
     description:

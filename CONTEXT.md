@@ -4,7 +4,7 @@ Read this with [AGENTS.md](AGENTS.md) before every task. This file holds the rul
 
 ## Project
 
-- Public website for Vee's Nail Studio (`https://veenailstudio.ca`): services, pricing, design tiers, gallery, policies, FAQs and testimonials. Booking is a separate app (`veenails-booking`, `https://booking.veenailstudio.ca`).
+- Public website for Vee's Nail Studio (`https://www.veenailstudio.ca`): services, pricing, design tiers, gallery, policies, FAQs and testimonials. Booking is a separate app (`veenails-booking`, `https://booking.veenailstudio.ca`).
 - Next.js 16 App Router, React 19, TypeScript, Tailwind CSS, Supabase (read-only public content), Swiper, React Icons. Node 26 (`.nvmrc`).
 - Branch model: develop flow. `develop` deploys to Vercel Preview, `main` to Production.
 

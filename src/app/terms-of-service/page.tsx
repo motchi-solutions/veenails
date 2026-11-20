@@ -387,7 +387,7 @@ export default function TermsOfServicePage() {
                         <p>
                             For questions about these Terms, contact Vee&apos;s
                             Nail Studio through the contact method listed on
-                            https://veenailstudio.ca or by email at
+                            https://www.veenailstudio.ca or by email at
                             admin@motchi.ca. Booking changes, cancellation
                             requests, and design inspiration should be sent
                             through the booking system or the contact method
