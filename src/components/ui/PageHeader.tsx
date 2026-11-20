@@ -1,4 +1,5 @@
 import ButtonLink from "./ButtonLink";
+import { site } from "@/lib/site";
 
 export default function PageHeader({
     intro,
@@ -14,8 +15,7 @@ export default function PageHeader({
     redirectPage?: string;
 }) {
     const bookingURL =
-        process.env.NEXT_PUBLIC_BOOKING_URL ||
-        "https://booking.veenailstudio.ca";
+        site.bookingUrl;
 
     return (
         <div className="mx-auto max-w-4xl px-6 text-center">

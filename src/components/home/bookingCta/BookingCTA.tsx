@@ -5,12 +5,12 @@ import { IoCheckmark } from "react-icons/io5";
 import SectionBlock from "@/components/home/SectionBlock";
 import ScrollLink from "@/components/ui/ScrollLink";
 import ButtonLink from "@/components/ui/ButtonLink";
+import { site } from "@/lib/site";
 
 export default function BookingCTA({ id = "booking" }: { id?: string }) {
     const [reviewedPolicies, setReviewedPolicies] = useState(false);
     const bookingURL =
-        process.env.NEXT_PUBLIC_BOOKING_URL ||
-        "https://booking.veenailstudio.ca";
+        site.bookingUrl;
 
     return (
         <SectionBlock

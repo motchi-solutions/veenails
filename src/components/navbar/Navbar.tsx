@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Squash as Hamburger } from "hamburger-react";
 import ButtonLink from "../ui/ButtonLink";
+import { site } from "@/lib/site";
 
 const NAV_ITEMS = [
     { href: "/", label: "Home" },
@@ -75,8 +76,7 @@ export default function Navbar() {
     }, [open]);
 
     const redirectURL =
-        process.env.NEXT_PUBLIC_BOOKING_URL ||
-        "https://booking.veenailstudio.ca";
+        site.bookingUrl;
 
     return (
         <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur">

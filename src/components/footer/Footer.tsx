@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FaInstagram, FaTiktok, FaMapMarkerAlt } from "react-icons/fa";
 import ButtonLink from "../ui/ButtonLink";
+import { site } from "@/lib/site";
 
 export default function Footer() {
     const quickLinks = [
@@ -13,8 +14,7 @@ export default function Footer() {
     ];
 
     const redirectURL =
-        process.env.NEXT_PUBLIC_BOOKING_URL ||
-        "https://booking.veenailstudio.ca";
+        site.bookingUrl;
 
     return (
         <footer className="border-t border-border bg-background">
