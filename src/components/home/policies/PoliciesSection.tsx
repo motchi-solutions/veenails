@@ -4,11 +4,11 @@ import ButtonLink from "@/components/ui/ButtonLink";
 
 import { getPolicies } from "@/utils/queries/getPolicies";
 import type { ContentItem } from "@/utils/types/contentItem";
+import { site } from "@/lib/site";
 
 export default async function PoliciesSection({ id = "policies" }: { id?: string }) {
     const redirectURL =
-        process.env.NEXT_PUBLIC_BOOKING_URL ||
-        "https://booking.veenailstudio.ca";
+        site.bookingUrl;
 
     const policyItems: ContentItem[] = await getPolicies();
 

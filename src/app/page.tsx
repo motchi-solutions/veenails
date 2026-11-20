@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import SectionBlock from "@/components/home/SectionBlock";
 
 import HeroSection from "@/components/home/hero/HeroSection";
@@ -16,6 +17,11 @@ import type { ServiceItem } from "@/utils/types/serviceItem";
 
 import { getTestimonials } from "@/utils/queries/getTestimonials";
 import type { TestimonialItem } from "@/utils/types/testimonialItem";
+
+export const metadata: Metadata = {
+    title: { absolute: "Vee's Nail Studio | Gel Nails and Nail Art in Toronto" },
+    alternates: { canonical: "/" },
+};
 
 export default async function Home() {
     const [testimonials, rawServiceItems] = await Promise.all([

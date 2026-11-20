@@ -1,6 +1,6 @@
 # Vee's Nail Studio Website
 
-This repository contains the public website for Vee's Nail Studio: https://veenailstudio.ca. It is built with Next.js and displays studio information, services, pricing, design tiers, gallery images, policies, FAQs, testimonials, and booking calls to action.
+This repository contains the public website for Vee's Nail Studio: https://www.veenailstudio.ca. It is built with Next.js and displays studio information, services, pricing, design tiers, gallery images, policies, FAQs, testimonials, and booking calls to action.
 
 Booking is handled separately from this website. The current site links to the booking app at https://booking.veenailstudio.ca, and this repo will later connect with the separate booking repository.
 

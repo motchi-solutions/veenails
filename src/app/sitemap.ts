@@ -1,42 +1,10 @@
 import type { MetadataRoute } from "next";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
-        ? process.env.NEXT_PUBLIC_BASE_URL.startsWith("http")
-            ? process.env.NEXT_PUBLIC_BASE_URL
-            : `https://${process.env.NEXT_PUBLIC_BASE_URL}`
-        : "http://localhost:3000";
+import { absoluteUrl } from "@/lib/site";
 
-    return [
-        {
-            url: `${baseUrl}/`,
-            lastModified: new Date(),
-            changeFrequency: "weekly",
-            priority: 1,
-        },
-        {
-            url: `${baseUrl}/pricing`,
-            lastModified: new Date(),
-            changeFrequency: "weekly",
-            priority: 0.9,
-        },
-        {
-            url: `${baseUrl}/gallery`,
-            lastModified: new Date(),
-            changeFrequency: "monthly",
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/privacy-policy`,
-            lastModified: new Date(),
-            changeFrequency: "yearly",
-            priority: 0.5,
-        },
-        {
-            url: `${baseUrl}/terms-of-service`,
-            lastModified: new Date(),
-            changeFrequency: "yearly",
-            priority: 0.5,
-        },
-    ];
+/** Public pages. Add new public routes here. */
+const publicRoutes = ["/", "/pricing", "/gallery", "/privacy-policy", "/terms-of-service"];
+
+export default function sitemap(): MetadataRoute.Sitemap {
+    return publicRoutes.map((path) => ({ url: absoluteUrl(path) }));
 }
