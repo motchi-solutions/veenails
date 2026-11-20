@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
                 </div>
 
                 <div className="mt-8 rounded-xl bg-[#f7deec] px-5 py-4 text-sm font-medium">
-                    Effective date: May 27, 2026
+                    Effective date: November 19, 2026
                 </div>
 
                 <div className="legal-copy mt-6 space-y-7 text-sm leading-7 md:text-base">
@@ -228,6 +228,21 @@ export default function PrivacyPolicyPage() {
                             send design inspiration through Instagram. Your use
                             of those third-party services may be governed by
                             their own terms and privacy policies.
+                        </p>
+                        <p>
+                            This website is hosted on Vercel, which delivers its
+                            pages through a global content network. We count
+                            visits with Vercel Web Analytics to see which pages
+                            are useful. For each page view it records the page
+                            address (without anything after a &quot;?&quot; or
+                            &quot;#&quot;, except campaign tags such as
+                            &quot;utm_source&quot;), the referring website,
+                            approximate location (country and city), and device,
+                            browser, and operating system type. It sets no
+                            cookies, does not store your IP address, and uses a
+                            hashed value that is discarded after 24 hours, so it
+                            cannot follow you across days or other websites. We
+                            see only totals.
                         </p>
                     </section>
 
