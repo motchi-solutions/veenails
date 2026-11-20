@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import GallerySection from "@/components/gallery/GallerySection";
 import Reveal from "@/components/ui/animation/Reveal";
 import FloatingSectionNav from "@/components/ui/FloatingSectionNav";
@@ -5,6 +6,13 @@ import PageHeader from "@/components/ui/PageHeader";
 
 import { getGallery } from "@/utils/queries/getGallery";
 import type { GalleryGroup } from "@/utils/types/galleryItem";
+
+export const metadata: Metadata = {
+    title: "Gallery",
+    description:
+        "Photos of gel nails, custom nail art and designs by Vee's Nail Studio in Toronto.",
+    alternates: { canonical: "/gallery" },
+};
 
 export default async function GalleryPage() {
 

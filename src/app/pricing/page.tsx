@@ -12,6 +12,14 @@ import type { PricingGroup, DesignTier } from "@/utils/types/pricingItem";
 import { getPolicies } from "@/utils/queries/getPolicies";
 import type { ContentItem } from "@/utils/types/contentItem";
 import Reveal from "@/components/ui/animation/Reveal";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Pricing",
+    description:
+        "Service prices and design tiers at Vee's Nail Studio in Toronto, with deposit and booking policies.",
+    alternates: { canonical: "/pricing" },
+};
 
 export default async function PricingPage() {
     const pricingGroups: PricingGroup[] = await getPricing();

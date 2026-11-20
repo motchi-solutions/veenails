@@ -3,6 +3,10 @@ import { Geist, Geist_Mono, Fraunces } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import { SiteAnalytics } from "@/components/analytics/site-analytics";
+import { analyticsEnabled } from "@/lib/analytics";
+import { JsonLd } from "@/components/seo/json-ld";
+import { indexingAllowed, site, siteUrl } from "@/lib/site";
 
 const geistSans = Geist({
     variable: "--font-sans",
@@ -35,10 +39,37 @@ export const metadata: Metadata = {
         capable: true,
         statusBarStyle: "default",
     },
-    metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://veenailstudio.ca'),
-    alternates: {
-        canonical: "/",
-    }
+    metadataBase: new URL(siteUrl()),
+    openGraph: {
+        type: "website",
+        siteName: site.name,
+        locale: site.locale,
+        images: ["/opengraph-image.png"],
+    },
+    twitter: { card: "summary_large_image", images: ["/twitter-image.png"] },
+    robots: indexingAllowed() ? undefined : { index: false, follow: false },
+};
+
+/* Business details for search engines. Only facts shown on the site. */
+const businessJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "NailSalon",
+    name: site.name,
+    url: site.url,
+    image: `${site.url}/opengraph-image.png`,
+    description: site.description,
+    address: {
+        "@type": "PostalAddress",
+        addressLocality: "Toronto",
+        addressRegion: "ON",
+        addressCountry: "CA",
+    },
+    areaServed: "Toronto",
+    sameAs: site.social,
+    potentialAction: {
+        "@type": "ReserveAction",
+        target: site.bookingUrl,
+    },
 };
 
 
@@ -54,9 +85,11 @@ export default function RootLayout({
             data-scroll-behavior="smooth"
         >
             <body className="min-h-dvh bg-background text-foreground antialiased">
+                <JsonLd data={businessJsonLd} />
                 <Navbar />
                 {children}
                 <Footer />
+                {analyticsEnabled() && <SiteAnalytics />}
             </body>
         </html>
     );

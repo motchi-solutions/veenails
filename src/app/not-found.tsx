@@ -4,11 +4,11 @@ import ButtonLink from "@/components/ui/ButtonLink";
 
 import { FiHome, FiImage, FiDollarSign } from "react-icons/fi";
 import { IoIosWarning } from "react-icons/io";
+import { site } from "@/lib/site";
 
 export default function NotFound() {
     const bookingURL =
-        process.env.NEXT_PUBLIC_BOOKING_URL ||
-        "https://booking.veenailstudio.ca";
+        site.bookingUrl;
 
     return (
         <main className="min-h-screen bg-background px-6 py-20 text-foreground">

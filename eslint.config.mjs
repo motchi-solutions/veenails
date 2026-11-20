@@ -6,6 +6,7 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   globalIgnores([
     '.next/**',
+    '.agents/**', // Vendored agent skills, not app code.
     'out/**',
     'build/**',
     'next-env.d.ts',

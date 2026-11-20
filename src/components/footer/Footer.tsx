@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FaInstagram, FaTiktok, FaMapMarkerAlt } from "react-icons/fa";
 import ButtonLink from "../ui/ButtonLink";
+import { site } from "@/lib/site";
 
 export default function Footer() {
     const quickLinks = [
@@ -13,8 +14,7 @@ export default function Footer() {
     ];
 
     const redirectURL =
-        process.env.NEXT_PUBLIC_BOOKING_URL ||
-        "https://booking.veenailstudio.ca";
+        site.bookingUrl;
 
     return (
         <footer className="border-t border-border bg-background">
@@ -104,9 +104,9 @@ export default function Footer() {
                         Website by{" "}
                         <a
                             className="btn-link text-xs"
-                            href="https://motchi.ca"
+                            href="https://www.motchi.ca/websites?utm_source=veenails&utm_medium=referral&utm_campaign=client-footer"
                             target="_blank"
-                            rel="noreferrer"
+                            rel="noopener"
                         >
                             Motchi Websites
                         </a>
