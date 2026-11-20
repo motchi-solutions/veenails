@@ -104,9 +104,9 @@ export default function Footer() {
                         Website by{" "}
                         <a
                             className="btn-link text-xs"
-                            href="https://motchi.ca"
+                            href="https://www.motchi.ca/websites?utm_source=veenails&utm_medium=referral&utm_campaign=client-footer"
                             target="_blank"
-                            rel="noreferrer"
+                            rel="noopener"
                         >
                             Motchi Websites
                         </a>
