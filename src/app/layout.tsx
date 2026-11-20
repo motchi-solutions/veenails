@@ -44,8 +44,9 @@ export const metadata: Metadata = {
         type: "website",
         siteName: site.name,
         locale: site.locale,
+        images: ["/opengraph-image.png"],
     },
-    twitter: { card: "summary_large_image" },
+    twitter: { card: "summary_large_image", images: ["/twitter-image.png"] },
     robots: indexingAllowed() ? undefined : { index: false, follow: false },
 };
 
